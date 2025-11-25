@@ -81,10 +81,39 @@ Este servicio verifica si una secuencia de ADN corresponde a un mutante.
 {
     "dna": ["ATGCGA", "CAGTGC", "TTATGT", "AGAAGG", "CCCCTA", "TCACTG"]
 }
-
+```
 #### **Respuestas HTTP:**
 
 * **200 OK: Si la secuencia de ADN pertenece a un Mutante.**
 * **403 Forbidden: Si la secuencia de ADN pertenece a un Humano (No Mutante).**
 
 ### 2. GET /stats (Estadísticas de Verificación)
+
+
+---
+
+## ☁️ Despliegue en Cloud (Nivel 2)
+
+**Requisito de Entrega:** URL de la API.
+
+El servicio ha sido hosteado en la plataforma de *cloud computing libre* **Render**.
+
+* **URL de la API Desplegada:**
+    * **`https://mutantes-aciar-julian.onrender.com`**
+
+---
+
+## ✅ Consideraciones del Nivel 3
+
+* **Persistencia de Datos:** Se utiliza **H2** como base de datos embebida para almacenar solo **un registro por secuencia de ADN** verificado, evitando duplicados.
+* **Optimización del Algoritmo:** La función `isMutant` está optimizada y utiliza **Terminación Anticipada**, deteniendo la búsqueda y devolviendo `true` tan pronto como se encuentran las dos secuencias requeridas.
+* **Calidad de Código:** El proyecto incluye **Tests Unitarios** y de **Integración** con un **Code Coverage superior al 80%**.
+
+---
+
+## 🖼️ Documentos de Entrega y Diagramas
+
+**Requisito de Entrega:** El código fuente, las instrucciones, la URL de la API y el Diagrama de Secuencia en formato PDF.
+
+* **Diagrama de Secuencia:** Se anexa el documento en formato **PDF** con el diagrama UML de los flujos de la API (`/mutant/` y `/stats`).
+
