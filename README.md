@@ -1,32 +1,40 @@
-# 🧬 X-MEN DNA ANALYZER - DETECTOR DE MUTANTES
+# 🧬 X-MEN DNA ANALYZER - PROYECTO INTEGRADOR
 
-**Proyecto Integrador para MercadoLibre**
+## 📝 Descripción del Proyecto
 
-## 📜 Descripción del Proyecto
+Este proyecto fue desarrollado bajo encargo de **Magneto** para crear un sistema eficiente que determine si un humano es mutante, basándose en el análisis de su secuencia de ADN.
 
-[cite_start]Este proyecto fue desarrollado por encargo de **Magneto** [cite: 2] [cite_start]para crear un sistema eficiente que determine si un humano es mutante [cite: 3] [cite_start]basándose en el análisis de su secuencia de ADN[cite: 3].
+Una persona es considerada mutante si se encuentra **más de una** secuencia de cuatro letras iguales (A, T, C, o G) en su matriz de ADN, de forma:
 
-[cite_start]Una persona es considerada mutante si su matriz de ADN contiene **más de una** secuencia de cuatro letras iguales [cite: 44] encontradas de forma:
-* [cite_start]Horizontal[cite: 43].
-* [cite_start]Vertical[cite: 43].
-* [cite_start]Oblicua (Diagonal)[cite: 43].
+* **Horizontal**.
+* **Vertical**.
+* **Oblicua** (Diagonales).
 
-El proyecto cumple con los tres niveles de desafío propuestos, incluyendo la implementación de una API REST, persistencia de datos y un servicio de estadísticas.
+El proyecto cumple con los tres niveles de desafío propuestos, incluyendo la implementación de una API REST, persistencia de datos con H2, y un servicio de estadísticas.
+
+---
 
 ## 🛠️ Stack Tecnológico
 
-* [cite_start]**Lenguaje:** Java [cite: 113]
-* [cite_start]**Framework:** Spring Boot [cite: 20, 48]
-* [cite_start]**Base de Datos:** H2 Database (Embedida) [cite: 61]
-* [cite_start]**Persistencia:** Spring Data JPA [cite: 115]
-* **Build Tool:** Maven
+| Categoría | Tecnología |
+| :--- | :--- |
+| **Lenguaje** | Java |
+| **Framework** | Spring Boot |
+| **Persistencia** | Spring Data JPA |
+| **Base de Datos** | H2 Database (Embedida) |
+| **Build Tool** | Maven |
+| **Cloud** | Render |
 
-## 💻 Requisitos Previos
+---
 
-Para ejecutar la aplicación localmente, se requiere:
+## ⚙️ Requisitos Previos
+
+Para ejecutar la aplicación localmente, se requiere tener instalado:
 
 * **Java Development Kit (JDK):** Versión 17 o superior.
-* **Maven:** Para la gestión de dependencias y compilación.
+* **Maven:** Para la gestión de dependencias.
+
+---
 
 ## 🚀 Instrucciones de Ejecución Local
 
@@ -39,17 +47,35 @@ Sigue estos pasos para levantar el proyecto en tu máquina:
     ```
 
 2.  **Compilar y Empaquetar:**
+    Utiliza el wrapper de Maven para compilar y generar el archivo JAR.
     ```bash
     ./mvnw clean install
     ```
 
 3.  **Ejecutar la Aplicación Spring Boot:**
+    La aplicación se iniciará en el puerto 8080 (por defecto).
     ```bash
     java -jar target/mutantes-aciar-julian-0.0.1-SNAPSHOT.jar
-    # El puerto por defecto es 8080.
     ```
-    La aplicación estará disponible en `http://localhost:8080`.
 
+---
+
+## 🌐 Endpoints de la API REST
+
+La API expone dos servicios principales que cumplen con los desafíos del Nivel 2 y 3.
+
+### 1. POST /mutant/ (Detección de Mutantes)
+
+Este servicio es el encargado de verificar si una secuencia de ADN corresponde a un mutante.
+
+* **Método:** `POST`
+* **Ruta:** `/mutant/`
+
+#### **Ejemplo de Petición:**
+```json
+{
+    "dna": ["ATGCGA", "CAGTGC", "TTATGT", "AGAAGG", "CCCCTA", "TCACTG"]
+}
 ## 🌐 Endpoints de la API REST
 
 La API expone los siguientes servicios:
@@ -106,6 +132,3 @@ Devuelve las estadísticas acumuladas de todas las verificaciones de ADN.
 
 * [cite_start]**Diagrama de Secuencia:** Se anexa el documento en formato PDF con el diagrama UML de los flujos de la API (para `/mutant/` y `/stats`)[cite: 36].
 
----
-
-¿Necesitas ayuda para completar la sección de la URL de Render o prefieres que revisemos alguna otra parte de la documentación?
