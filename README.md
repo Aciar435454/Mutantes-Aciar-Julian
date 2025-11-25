@@ -1,5 +1,9 @@
 # 🧬 X-MEN DNA ANALYZER - PROYECTO INTEGRADOR
 
+**Desarrollador:** Julián Aciar
+**Comisión:** 3K09
+**Institución:** Universidad Tecnológica Nacional
+
 ## 📝 Descripción del Proyecto
 
 Este proyecto fue desarrollado bajo encargo de **Magneto** para crear un sistema eficiente que determine si un humano es mutante, basándose en el análisis de su secuencia de ADN.
