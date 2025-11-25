@@ -84,12 +84,25 @@ Este servicio verifica si una secuencia de ADN corresponde a un mutante.
 ```
 #### **Respuestas HTTP:**
 
-* **200 OK: Si la secuencia de ADN pertenece a un Mutante.**
-* **403 Forbidden: Si la secuencia de ADN pertenece a un Humano (No Mutante).**
+* **200 OK:** Si la secuencia de ADN pertenece a un Mutante.
+* **403 Forbidden:** Si la secuencia de ADN pertenece a un Humano (No Mutante).
 
 ### 2. GET /stats (Estadísticas de Verificación)
 
+Este servicio expone las estadísticas acumuladas de las verificaciones de ADN persistidas en la base de datos.
 
+* **Método:** `GET`.
+* **Ruta:** `/stats/`.
+  
+#### **Respuesta HTTP: 200 OK con un cuerpo JSON:**
+```json
+{
+    "count_mutant_dna": 40,
+    "count_human_dna": 100,
+    "ratio": 0.4
+}
+```
+* **Campos de Respuesta:** Incluye el conteo de ADN mutantes `count_mutant_dna`, el conteo de ADN humanos `count_human_dna`, y el ratio entre ellos.
 ---
 
 ## ☁️ Despliegue en Cloud (Nivel 2)
