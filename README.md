@@ -1,8 +1,8 @@
 # 🧬 X-MEN DNA ANALYZER - PROYECTO INTEGRADOR
 
-**Desarrollador:** Julián Aciar
-**Comisión:** 3K09
-**Institución:** Universidad Tecnológica Nacional
+* **Desarrollador:** Julián Aciar
+* **Comisión:** 3K09
+* **Institución:** Universidad Tecnológica Nacional
 
 ## 📝 Descripción del Proyecto
 
