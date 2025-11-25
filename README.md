@@ -81,3 +81,10 @@ Este servicio verifica si una secuencia de ADN corresponde a un mutante.
 {
     "dna": ["ATGCGA", "CAGTGC", "TTATGT", "AGAAGG", "CCCCTA", "TCACTG"]
 }
+
+#### **Respuestas HTTP:**
+
+* **200 OK: Si la secuencia de ADN pertenece a un Mutante.**
+* **403 Forbidden: Si la secuencia de ADN pertenece a un Humano (No Mutante).**
+
+### 2. GET /stats (Estadísticas de Verificación)
